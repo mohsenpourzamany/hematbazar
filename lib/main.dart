@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hematbazar/widget/banner_slider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,6 +10,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return const MaterialApp(
+      home: SafeArea(
+        child: Scaffold(
+          body: BannerSlider(),
+        ),
+      ),
+    );
   }
 }
