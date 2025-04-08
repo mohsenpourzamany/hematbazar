@@ -8,10 +8,6 @@ class HorizontalCategoryList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      // children: [
-      //   BannerSlider(),
-      //   HorizontalCategoryList(),
-      // ],
       children: [
         Stack(
           alignment: AlignmentDirectional.center,
@@ -41,7 +37,10 @@ class HorizontalCategoryList extends StatelessWidget {
         const SizedBox(
           height: 10,
         ),
-        const Text('test'),
+        const Text(
+          'کامپیوتر',
+          style: TextStyle(fontFamily: 'vazir', fontSize: 14),
+        ),
       ],
     );
   }

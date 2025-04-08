@@ -23,9 +23,12 @@ class ProductItem extends StatelessWidget {
             alignment: AlignmentDirectional.center,
             children: [
               Expanded(child: Container()),
-              const Image(
-                width: 70,
-                image: AssetImage('assets/image/iphone.png'),
+              const SizedBox(
+                height: 98,
+                width: 98,
+                child: Image(
+                  image: AssetImage('assets/image/iphone.png'),
+                ),
               ),
               const Positioned(
                 top: 0,
@@ -34,7 +37,8 @@ class ProductItem extends StatelessWidget {
                   width: 35,
                   height: 35,
                   child: Image(
-                      image: AssetImage('assets/icon/active_fav_product.png')),
+                    image: AssetImage('assets/icon/active_fav_product.png'),
+                  ),
                 ),
               ),
               Positioned(
@@ -93,12 +97,12 @@ class ProductItem extends StatelessWidget {
                     ),
                   ],
                 ),
-                child: const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 6),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 6),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
-                      Text(
+                      const Text(
                         'تومان',
                         style: TextStyle(
                             color: Color(0xffffffff),
@@ -106,10 +110,10 @@ class ProductItem extends StatelessWidget {
                             fontSize: 12,
                             fontWeight: FontWeight.w700),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 5,
                       ),
-                      Column(
+                      const Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
@@ -131,13 +135,16 @@ class ProductItem extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
-                      SizedBox(
-                        width: 35,
-                        child: Image(
-                          image: AssetImage('assets/icon/arrows.png'),
+                      Container(
+                        margin: const EdgeInsets.only(left: 5),
+                        child: const SizedBox(
+                          width: 30,
+                          child: Image(
+                            image: AssetImage('assets/icon/arrows.png'),
+                          ),
                         ),
                       ),
                     ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:hematbazar/constants/colors.dart';
 
 class BannerSlider extends StatefulWidget {
   const BannerSlider({super.key});
@@ -31,11 +32,18 @@ class _BannerSliderState extends State<BannerSlider> {
             },
           ),
         ),
-        SmoothPageIndicator(
-          controller: controller,
-          count: 4,
-          effect: const ExpandingDotsEffect(
-              dotHeight: 10, dotWidth: 10, expansionFactor: 5),
+        Positioned(
+          bottom: 17,
+          child: SmoothPageIndicator(
+            controller: controller,
+            count: 4,
+            effect: const ExpandingDotsEffect(
+                dotHeight: 10,
+                dotWidth: 10,
+                expansionFactor: 5,
+                dotColor: CostumColors.whitehb,
+                activeDotColor: CostumColors.bluehb),
+          ),
         ),
       ],
     );
